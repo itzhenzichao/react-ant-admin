@@ -1,0 +1,10 @@
+// $color: #000;
+body {
+    // background: $color;
+    // 禁用文字选中
+    user-select: none;
+}
+// 禁用图片拖拽
+img {
+    -webkit-user-drag: none;
+}
