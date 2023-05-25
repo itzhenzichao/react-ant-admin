@@ -31,10 +31,8 @@ function getItem(
 const items: MenuItem[] = [
   getItem('统计', '/statistics', <PieChartOutlined />),
   getItem('列表', '/list', <DesktopOutlined />),
-  getItem('User', 'page3', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
+  getItem('记录', 'record', <UserOutlined />, [
+    getItem('商品入库', '/record/goods'),
   ]),
   getItem('Team', 'page4', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
   getItem('Files', '9', <FileOutlined />),
@@ -58,9 +56,9 @@ const View: React.FC = () => {
     navigate(e.key)
   }
   const [openKeys, setOpenKeys] = useState(['']);
-  const rootSubmenuKeys = ['page3','page4'];
+  const rootSubmenuKeys = ['record','page4'];
   const onOpenChange: MenuProps['onOpenChange'] = (keys) => {
-    console.log(keys);
+    console.log('onOpenChange',keys);
     const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
     if (rootSubmenuKeys.indexOf(latestOpenKey!) === -1) {
       setOpenKeys(keys);

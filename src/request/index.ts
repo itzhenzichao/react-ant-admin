@@ -6,14 +6,12 @@ const instance = axios.create({
 })
 
 instance.interceptors.request.use((config) => {
-  console.log('request interceptor')
   return config
 }, (error) => {
   return Promise.reject(error)
 })
 
 instance.interceptors.response.use((response) => {
-  console.log('response interceptor')
   return response
 }, (error) => {
   return Promise.reject(error)

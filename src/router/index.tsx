@@ -1,10 +1,12 @@
 import { Navigate } from 'react-router-dom'
 import React,{ lazy } from 'react';
 import Home from '@/views/Home';
+import NotFoundPage from '@/views/Error/404';
 // import About from '@/views/About';
 const About = lazy(() => import('@/views/About'));
 const StatisticsPage = lazy(() => import('@/views/Statistics'));
 const ListPage = lazy(() => import('@/views/List'));
+const RecordGoodsPage = lazy(() => import('@/views/Record/Goods/goods'));
 
 const withLoadingComponent = (comp: JSX.Element) => (
   <React.Suspense fallback={<div>loading...</div>}>
@@ -27,6 +29,15 @@ const Router = [
       {
         path:'/list',
         element: withLoadingComponent(<ListPage />),
+      },
+      {
+        path:'/record',
+        children:[
+          {
+            path:'/record/goods',
+            element: withLoadingComponent(<RecordGoodsPage />),
+          },
+        ]
       }
     ]
   },
@@ -36,7 +47,7 @@ const Router = [
   },
   {
     path:'*',
-    element: <div>404</div>,
+    element: <NotFoundPage></NotFoundPage>,
   }
 ]
 
