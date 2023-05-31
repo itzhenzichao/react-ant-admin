@@ -7,6 +7,7 @@ const About = lazy(() => import('@/views/About'));
 const StatisticsPage = lazy(() => import('@/views/Statistics'));
 const ListPage = lazy(() => import('@/views/List'));
 const RecordGoodsPage = lazy(() => import('@/views/Record/Goods/goods'));
+const LoginPage = lazy(() => import('@/views/Login'));
 
 const withLoadingComponent = (comp: JSX.Element) => (
   <React.Suspense fallback={<div>loading...</div>}>
@@ -44,6 +45,10 @@ const Router = [
   {
     path:'/about',
     element: withLoadingComponent(<About />),
+  },
+  {
+    path:'/login',
+    element: <LoginPage></LoginPage>,
   },
   {
     path:'*',

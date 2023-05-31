@@ -9,6 +9,7 @@
 * [![Vite][Vite-icon]][Vite-url]
 * [![AntDesign][AntDesign-icon]][AntDesign-url]
 * [![sass][sass-icon]][sass-url]
+* [![apacheecharts][apacheecharts-icon]][apacheecharts-url]
 
 ## 项目运行
 
@@ -28,4 +29,6 @@
 [AntDesign-icon]: https://img.shields.io/badge/AntDesign-35495E?style=for-the-badge&logo=antdesign&logoColor=#0170FE
 [AntDesign-url]: https://ant.design/index-cn
 [sass-icon]: https://img.shields.io/badge/sass-35495E?style=for-the-badge&logo=sass&logoColor=#CC6699
-[sass-url]: https://ant.design/index-cn
+[sass-url]: https://www.sass.hk/docs/
+[apacheecharts-icon]: https://img.shields.io/badge/apacheecharts-35495E?style=for-the-badge&logo=apacheecharts&logoColor=#AA344D
+[apacheecharts-url]: https://echarts.apache.org/handbook/zh/get-started/

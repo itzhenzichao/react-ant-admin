@@ -49,8 +49,6 @@ function Goods() {
   const openAddGoodsBox = ()=>{
     setIsModalOpen(true);
     setModalTitle('新增商品')
-    // setFormDefaultValue({ season: 'autumn',price:99 })
-    console.log('openAddGoodsBox',setFormDefaultValue)
   }
   // 页面初始化
   useEffect(() => {
@@ -64,14 +62,14 @@ function Goods() {
         time: 1685436015361,
       });
     };
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
   const [form] = Form.useForm();
   const handleCancel = () => {
     setIsModalOpen(false);
   };
   const handleClose = () => {
     setFormDefaultValue({ season: 'spring',price:1 })
-    console.log('handleClose',formDefaultValue,setFormDefaultValue)
   }
   // 保存
   const onFinish = (values: formType) => {
@@ -94,11 +92,9 @@ function Goods() {
       setIsModalOpen(false);
       enterLoading(0)
     },1000)
-    console.log('Success:', values,formDefaultValue);
   };
   // 编辑
   const editGood = (text:string, record:any, index:number)=>{
-    console.log(text, record, index)
     setIsModalOpen(true);
     setModalTitle('编辑商品')
     const newRecord = JSON.parse(JSON.stringify(record))
