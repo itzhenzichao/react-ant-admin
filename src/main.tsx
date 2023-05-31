@@ -8,6 +8,7 @@ import '@/assets/styles/global.scss'
 // 路由表式路由
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
+import 'dayjs/locale/zh-cn';
 import zhCN from 'antd/locale/zh_CN';
 import { ConfigProvider } from 'antd';
 
