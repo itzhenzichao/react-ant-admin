@@ -1,11 +1,19 @@
-import React from 'react';
+import Line from '@/components/Statistics/Line';
+import Bar from '@/components/Statistics/Bar';
+import Pie from '@/components/Statistics/Pie';
 
-function Page1() {
+function Statistics() {
   return (
     <div>
-      Page1
+      <div style={{height:'400px',display: 'flex'}}>
+          <div style={{width:'50%'}}><Bar></Bar></div>
+          <div style={{width:'50%'}}><Pie></Pie></div>
+      </div>
+      <div style={{ height: '400px',marginTop:'50px'}}>
+        <Line></Line>
+      </div>
     </div>
   );
 }
 
-export default Page1;
+export default Statistics;
